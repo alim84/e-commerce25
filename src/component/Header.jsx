@@ -6,8 +6,8 @@ const Header = () => {
         <header className="bg-blackColor text-whiteColor font-poppins py-3">
        <div className="container ">
        <div className="flex justify-center relative">
-       <Marquee>
-            <h3 className="text-sm font-normal leading-5">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! <Link to="#">ShopNow</Link></h3>
+       <Marquee pauseOnHover={true}>
+            <h3 className="text-sm font-normal leading-5 font-bangla">আমাদের যে কোন পণ্য অর্ডার করতে কল বা WhatsApp করুন: +8801717986768 | হট লাইন: 01717986768 <Link to="#">ShopNow</Link></h3>
            </Marquee>
             <select className="text-blackColor absolute right-0 top-[-3px]">
                 <option>EN</option>
