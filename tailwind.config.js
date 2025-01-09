@@ -10,7 +10,7 @@ module.exports = withMT({
         'primaryWhite': '#FFFFFF',
       },
       fontFamily: {
-        poppins: ['Poppins', 'serif', 'Ubuntu'],
+        poppins: ['Nunito', 'serif'],
         bangla: ['Tiro Bangla', 'serif'],
       
       },

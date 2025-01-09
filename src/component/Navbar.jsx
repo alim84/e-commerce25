@@ -1,4 +1,7 @@
 import React from "react";
+import { FaShoppingBag } from "react-icons/fa";
+import { MdContactPhone } from "react-icons/md";
+import { FaCartPlus } from "react-icons/fa";
 import {
   Navbar,
   MobileNav,
@@ -13,12 +16,8 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import {
-  CubeTransparentIcon,
   UserCircleIcon,
-  CodeBracketSquareIcon,
-  Square3Stack3DIcon,
   ChevronDownIcon,
- 
   PowerIcon,
   RocketLaunchIcon,
   Bars2Icon,
@@ -85,7 +84,7 @@ function ProfileMenu() {
               <Typography
                 as="span"
                 variant="small"
-                className=" font-Ubuntu text-xs font-medium text-primary"
+                className=" font-Nunito text-xs font-medium text-primary"
                 color={isLastItem ? "red" : "inherit"}
               >
                 {label}
@@ -150,7 +149,7 @@ function NavListMenu() {
             </MenuItem> */}
           </Typography>
         </MenuHandler>
-        <MenuList className="hidden w-[36rem] grid-cols-7 gap-3 overflow-visible lg:grid">
+        <MenuList className="hidden w-full grid-cols-7 gap-3  lg:grid">
           <Card
             color="blue"
             shadow={false}
@@ -164,13 +163,8 @@ function NavListMenu() {
           </ul>
         </MenuList>
       </Menu>
-      <MenuItem className="flex items-center gap-2 font-medium text-blue-gray-900 lg:hidden">
-        <Square3Stack3DIcon className="h-[18px] w-[18px] text-blue-gray-500" />{" "}
-        Pages{" "}
-      </MenuItem>
-      <ul className="ml-6 flex w-full flex-col gap-1 lg:hidden">
-        {renderItems}
-      </ul>
+    
+     
     </React.Fragment>
   );
 }
@@ -180,15 +174,15 @@ function NavListMenu() {
 const navListItems = [
   {
     label: "Shop",
-    icon: UserCircleIcon,
+    icon: FaShoppingBag ,
   },
   {
     label: "Contact",
-    icon: CubeTransparentIcon,
+    icon: MdContactPhone ,
   },
   {
     label: "Cart",
-    icon: CodeBracketSquareIcon,
+    icon: FaCartPlus ,
   },
 ];
  
@@ -256,7 +250,7 @@ export function EcommerceNavbar() {
        
         <ProfileMenu />
       </div>
-      <MobileNav open={isNavOpen} className="overflow-scroll">
+      <MobileNav open={isNavOpen} className="">
         <NavList />
       </MobileNav>
     </Navbar>
