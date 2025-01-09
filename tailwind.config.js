@@ -6,11 +6,11 @@ module.exports = withMT({
     extend: {
 
       colors: {
-        'blackColor': '#000000',
-        'whiteColor': '#FFFFFF',
+        'primary': '#0f766e',
+        'primaryWhite': '#FFFFFF',
       },
       fontFamily: {
-        poppins: ['Poppins', 'serif'],
+        poppins: ['Poppins', 'serif', 'Ubuntu'],
         bangla: ['Tiro Bangla', 'serif'],
       
       },

@@ -18,9 +18,7 @@ import {
   CodeBracketSquareIcon,
   Square3Stack3DIcon,
   ChevronDownIcon,
-  Cog6ToothIcon,
-  InboxArrowDownIcon,
-  LifebuoyIcon,
+ 
   PowerIcon,
   RocketLaunchIcon,
   Bars2Icon,
@@ -32,18 +30,7 @@ const profileMenuItems = [
     label: "My Profile",
     icon: UserCircleIcon,
   },
-  {
-    label: "Edit Profile",
-    icon: Cog6ToothIcon,
-  },
-  {
-    label: "Inbox",
-    icon: InboxArrowDownIcon,
-  },
-  {
-    label: "Help",
-    icon: LifebuoyIcon,
-  },
+
   {
     label: "Sign Out",
     icon: PowerIcon,
@@ -98,7 +85,7 @@ function ProfileMenu() {
               <Typography
                 as="span"
                 variant="small"
-                className="font-normal"
+                className=" font-Ubuntu text-xs font-medium text-primary"
                 color={isLastItem ? "red" : "inherit"}
               >
                 {label}
@@ -151,7 +138,7 @@ function NavListMenu() {
       <Menu allowHover open={isMenuOpen} handler={setIsMenuOpen}>
         <MenuHandler>
           <Typography as="a" href="#" variant="small" className="font-normal">
-            <MenuItem className="hidden items-center gap-2 font-medium text-blue-gray-900 lg:flex lg:rounded-full">
+            {/* <MenuItem className="hidden items-center gap-2 font-medium text-blue-gray-900 lg:flex lg:rounded-full">
               <Square3Stack3DIcon className="h-[18px] w-[18px] text-blue-gray-500" />{" "}
               Pages{" "}
               <ChevronDownIcon
@@ -160,7 +147,7 @@ function NavListMenu() {
                   isMenuOpen ? "rotate-180" : ""
                 }`}
               />
-            </MenuItem>
+            </MenuItem> */}
           </Typography>
         </MenuHandler>
         <MenuList className="hidden w-[36rem] grid-cols-7 gap-3 overflow-visible lg:grid">
@@ -187,19 +174,20 @@ function NavListMenu() {
     </React.Fragment>
   );
 }
+
  
 // nav list component
 const navListItems = [
   {
-    label: "Account",
+    label: "Shop",
     icon: UserCircleIcon,
   },
   {
-    label: "Blocks",
+    label: "Contact",
     icon: CubeTransparentIcon,
   },
   {
-    label: "Docs",
+    label: "Cart",
     icon: CodeBracketSquareIcon,
   },
 ];
@@ -223,6 +211,9 @@ function NavList() {
           </MenuItem>
         </Typography>
       ))}
+      <Button  size="sm" variant="text">
+<span className="font-Ubuntu text-primary ml-auto text-xm">Log In</span>
+</Button>
     </ul>
   );
 }
@@ -245,11 +236,11 @@ export function EcommerceNavbar() {
         <Typography
           as="a"
           href="#"
-          className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
+          className="mr-4 ml-2 cursor-pointer text-primary py-1.5 font-semibold text-md"
         >
-          Material Tailwind
+          GODDU
         </Typography>
-        <div className="hidden lg:block">
+        <div className="hidden lg:block mx-auto">
           <NavList />
         </div>
         <IconButton
@@ -262,9 +253,7 @@ export function EcommerceNavbar() {
           <Bars2Icon className="h-6 w-6" />
         </IconButton>
  
-        <Button size="sm" variant="text">
-          <span>Log In</span>
-        </Button>
+       
         <ProfileMenu />
       </div>
       <MobileNav open={isNavOpen} className="overflow-scroll">
