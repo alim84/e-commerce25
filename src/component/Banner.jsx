@@ -1,6 +1,9 @@
+
+
 import Image from "./layout/Image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
+
 
 
 
@@ -27,13 +30,14 @@ const Banner = () => {
             <div
               style={{
                 width: "30px",
-                height: "30px",
+               background: "",
                 display:"flex",
                 justifyContent:"center",
                 alignItems:"center",
-                color: "blue",
-                border: "1px blue solid",
-                borderRadius:"50%"
+                color: "white",
+               
+               
+              
               }}
             >
               {i + 1}
@@ -47,20 +51,31 @@ const Banner = () => {
 image: "https://img.lazcdn.com/us/domino/9cedb4c8-a393-4517-a912-e39cef9d6d88_BD-1976-688.jpg_2200x2200q80.jpg"
         },
         {
-image: "https://img.lazcdn.com/us/domino/b0581c6d-601e-42cd-9919-1d7353dca426_BD-1976-688.jpg_2200x2200q80.jpg"
-        },
-        {
-image: "https://img.lazcdn.com/us/domino/9e83f1b3-36e0-4b25-b358-40aad3ebe90e_BD-1976-688.jpg_2200x2200q80.jpg"
-        },
+          image: "https://img.lazcdn.com/us/domino/b0581c6d-601e-42cd-9919-1d7353dca426_BD-1976-688.jpg_2200x2200q80.jpg"
+                  },
+                  {
+          image: "https://img.lazcdn.com/us/domino/9e83f1b3-36e0-4b25-b358-40aad3ebe90e_BD-1976-688.jpg_2200x2200q80.jpg"
+                  },
       ]
     return (
         <div className="mt-2">
-        <Slider {...settings}>
+        
 
-{Images.map((item, index)=>(
-    <Image src={item.image} alt={"banner Image"} />
-))}
-        </Slider>
+          {Images.length>1?
+          
+        
+          <Slider {...settings}>
+  
+  {Images.map((item, index)=>(
+      <Image src={item.image} alt={"banner Image"} />
+  ))}
+          </Slider>
+          :
+          <Image src={Images[0].image} alt={"banner Image"} />
+          }
+       
+       
+         
         </div>
     );
 };

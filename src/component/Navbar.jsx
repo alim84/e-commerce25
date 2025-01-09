@@ -22,6 +22,7 @@ import {
   RocketLaunchIcon,
   Bars2Icon,
 } from "@heroicons/react/24/solid";
+import Container from "./layout/Container";
  
 // profile menu component
 const profileMenuItems = [
@@ -190,7 +191,7 @@ function NavList() {
   return (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
       <NavListMenu />
-      {navListItems.map(({ label, icon }, key) => (
+      {navListItems.map(({ label, icon }) => (
         <Typography
           key={label}
           as="a"
@@ -201,12 +202,12 @@ function NavList() {
         >
           <MenuItem className="flex items-center gap-2 lg:rounded-full">
             {React.createElement(icon, { className: "h-[18px] w-[18px]" })}{" "}
-            <span className="text-gray-900"> {label}</span>
+            <span className="text-gray-900 font-nunito"> {label}</span>
           </MenuItem>
         </Typography>
       ))}
       <Button  size="sm" variant="text">
-<span className="font-Ubuntu text-primary ml-auto text-xm">Log In</span>
+<span className="font-Ubuntu text-primary ml-auto text-xm font-nunito">Log In</span>
 </Button>
     </ul>
   );
@@ -225,8 +226,9 @@ export function EcommerceNavbar() {
   }, []);
  
   return (
-    <Navbar className="mx-auto max-w-screen-xl p-2 lg:rounded-full lg:pl-6">
-      <div className="relative mx-auto flex items-center justify-between text-blue-gray-900">
+    <Navbar className="mx-auto p-2 lg:rounded-full lg:pl-6">
+ <Container>
+ <div className="relative mx-auto flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
           href="#"
@@ -253,6 +255,7 @@ export function EcommerceNavbar() {
       <MobileNav open={isNavOpen} className="">
         <NavList />
       </MobileNav>
+ </Container>
     </Navbar>
   );
 }

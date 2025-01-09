@@ -1,7 +1,8 @@
 import { Outlet } from "react-router-dom";
 import  {EcommerceNavbar}  from "../Navbar";
 import Header from "../Header";
-import Footer from "../Footer";
+import { Footer } from "../Footer";
+
 
 
 const Rootlayout = () => {
@@ -10,7 +11,7 @@ const Rootlayout = () => {
         <Header/>
         <EcommerceNavbar/>
             <Outlet/>
-            <Footer/>
+           <Footer/>
         </>
     );
 };
