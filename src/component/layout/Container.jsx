@@ -3,7 +3,7 @@
 
 const Container = ({children}) => {
     return (
-        <div className="container">
+        <div className="container px-2.5">
            {children}
         </div>
     );

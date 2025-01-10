@@ -10,7 +10,7 @@ export function Footer() {
         <Typography
                  as="a"
                  href="#"
-                 className="text-2xl mr-4 ml-2 cursor-pointer text-primary py-1.5 font-semibold text-md"
+                 className="text-xl lg:text-2xl mr-4 ml-2 cursor-pointer text-primary py-1.5 font-semibold text-md"
                >
                  GODDU
                </Typography>
@@ -32,7 +32,7 @@ export function Footer() {
               color="blue-gray"
               className="font-normal font-Nunito transition-colors text-primary hover:text-teal-400 hover:font-md focus:text-primary"
             >
-              Contact
+              Contact us
             </Typography>
           </li>
           <li>
