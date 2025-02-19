@@ -28,7 +28,7 @@ const categoris=[
 
     return (
         <>
-            <section>
+            <section className='mt-[50px]'>
                 <Container>
                   <div>
                     <h2 className="text-xl text-center lg:text-2xl mb-8 font-bold text-primary font-Nunito">

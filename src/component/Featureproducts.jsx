@@ -1,13 +1,21 @@
-import React from 'react';
+
 import Container from './layout/Container';
+import Product from './Product';
 
 const Featureproducts = () => {
     return (
-        <section>
+        <section className='mt-[50px]'>
             <Container>
             <h2 className="text-xl text-center lg:text-2xl mb-8 font-bold text-primary font-Nunito">
                        Feature Products
                     </h2>
+                    <div className='grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+
+                    <Product/>
+                    <Product/>
+                    <Product/>
+                    <Product/>
+                    </div>
             </Container>
         </section>
     );
