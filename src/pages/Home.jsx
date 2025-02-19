@@ -1,5 +1,6 @@
 import Banner from "../component/Banner";
 import Catagories from "../component/Catagories";
+import Featureproducts from "../component/Featureproducts";
 
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
             <div>
               <Banner/>
               <Catagories/>
+              <Featureproducts/>
             </div>
         </div>
     );

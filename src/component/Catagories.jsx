@@ -31,7 +31,7 @@ const categoris=[
             <section>
                 <Container>
                   <div>
-                    <h2 className="text-xl lg:text-2xl mb-8 font-bold text-primary font-Nunito">
+                    <h2 className="text-xl text-center lg:text-2xl mb-8 font-bold text-primary font-Nunito">
                         Categories
                     </h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4">
