@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import ReactPaginate from 'react-paginate';
 import Product from './Product';
 
-// Example items, to simulate fetching from another resources.
+
 const items = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 
@@ -29,7 +29,6 @@ function Pagination({ itemsPerPage }) {
   const currentItems = items.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(items.length / itemsPerPage);
 
-  // Invoke when user click to request another page.
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % items.length;
     console.log(
@@ -43,15 +42,17 @@ function Pagination({ itemsPerPage }) {
       <Items currentItems={currentItems} />
       <ReactPaginate
         breakLabel="..."
-        nextLabel="next >"
+        nextLabel="Next"
         onPageChange={handlePageClick}
         pageRangeDisplayed={5}
         pageCount={pageCount}
-        previousLabel="< previous"
+        previousLabel="Prev"
         renderOnZeroPageCount={null}
         activeClassName="bg-red-500"
-        containerClassName="flex gap-3"
+        containerClassName="flex gap-3 items-center"
         nextClassName="bg-primary text-md text-white"
+        pageClassName="bg-primary text-md text-white px-2 py-1"
+        previousClassName="bg-primary text-md text-white px-2 py-1"
       />
     </>
   );
