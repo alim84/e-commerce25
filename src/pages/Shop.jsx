@@ -23,7 +23,7 @@ const Shop = () => {
         <section className='mt-10'>
             <Container>
             <FaFilter onClick={()=>setFilterModal(!filtermodal)} className='lg:hidden text-xl select-none cursor-pointer  text-primary  ml-auto  px-1' />
-        <div className='grid grid-cols-12 gap-4'>
+        <div className='grid grid-cols-3 gap-4'>
             {filtermodal && (
 
                 <div className='fixed w-full z-50 bg-white lg:w-auto lg:static top-5 col-span-12  lg:col-span-3'>

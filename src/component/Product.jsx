@@ -28,7 +28,7 @@ const Product = () => {
               <span className="text-2xl  font-bold lg text-slate-900">$449</span>
               <span className="text-sm text-slate-900 line-through">$699</span>
             </p>
-            <div className="flexitems-center ">
+            <div className="flex items-center ">
               <svg
                 aria-hidden="true"
                 className="h-5 w-5 text-yellow-300"
