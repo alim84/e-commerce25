@@ -23,6 +23,7 @@ import {
   Bars2Icon,
 } from "@heroicons/react/24/solid";
 import Container from "./layout/Container";
+import { Link } from "react-router-dom";
  
 // profile menu component
 const profileMenuItems = [
@@ -138,16 +139,7 @@ function NavListMenu() {
       <Menu allowHover open={isMenuOpen} handler={setIsMenuOpen}>
         <MenuHandler>
           <Typography as="a" href="#" variant="small" className="font-normal">
-            {/* <MenuItem className="hidden items-center gap-2 font-medium text-blue-gray-900 lg:flex lg:rounded-full">
-              <Square3Stack3DIcon className="h-[18px] w-[18px] text-blue-gray-500" />{" "}
-              Pages{" "}
-              <ChevronDownIcon
-                strokeWidth={2}
-                className={`h-3 w-3 transition-transform ${
-                  isMenuOpen ? "rotate-180" : ""
-                }`}
-              />
-            </MenuItem> */}
+  
           </Typography>
         </MenuHandler>
         <MenuList className="hidden w-full grid-cols-7 gap-3  lg:grid">
@@ -171,7 +163,7 @@ function NavListMenu() {
 }
 
  
-// nav list component
+
 const navListItems = [
   {
     label: "Shop",
@@ -181,7 +173,7 @@ const navListItems = [
   {
     label: "About Us",
     icon: MdContactPhone ,
-    href:"../pages/About.jsx"
+    href:"/about"
   },
   {
     label: "Cart",
@@ -209,7 +201,10 @@ function NavList() {
         </Typography>
       ))}
       <Button  size="sm" variant="text">
+        <Link to='/login'>
+        
 <span className="font-Ubuntu text-primary ml-auto text-xm font-nunito">Log In</span>
+        </Link>
 </Button>
     </ul>
   );
