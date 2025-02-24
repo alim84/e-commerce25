@@ -176,10 +176,12 @@ const navListItems = [
   {
     label: "Shop",
     icon: FaShoppingBag ,
+    href:"../pages/Shop.jsx"
   },
   {
-    label: "Contact",
+    label: "About Us",
     icon: MdContactPhone ,
+    href:"../pages/About.jsx"
   },
   {
     label: "Cart",
