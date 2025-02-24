@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useEffect, useState } from 'react';
 import Container from '../component/layout/Container';
 import Shopsidebar from '../component/Shopsidebar';
 import Allproduct from '../component/Allproduct';
@@ -6,7 +6,19 @@ import { FaFilter } from "react-icons/fa";
 import { MdCloseFullscreen } from "react-icons/md";
 
 const Shop = () => {
-    const [filtermodal, setFilterModal]=useState(true)
+    const [filtermodal, setFilterModal]=useState(true);
+
+    useEffect(()=>{
+        function ResizeScreen(){
+           if(window.innerWidth<1024){
+            setFilterModal(false)
+           }else{
+            setFilterModal(true)
+           }
+        }
+        ResizeScreen()
+        window.addEventListener("resize", ResizeScreen)
+    },[])
     return (
         <section className='mt-10'>
             <Container>

@@ -50,9 +50,9 @@ function Pagination({ itemsPerPage }) {
         renderOnZeroPageCount={null}
         activeClassName="bg-red-500"
         containerClassName="flex gap-3 items-center"
-        nextClassName="bg-primary text-md text-white"
+        nextClassName="bg-primary text-md text-white px-2 py-1 rounded-l-2xl font-bold"
         pageClassName="bg-primary text-md text-white px-2 py-1"
-        previousClassName="bg-primary text-md text-white px-2 py-1"
+        previousClassName="bg-primary text-md text-white px-2 py-1 rounded-r-2xl font-bold"
       />
     </>
   );
